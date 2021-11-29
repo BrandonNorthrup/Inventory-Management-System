@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import inventory.management.AddProductPartController?>
+
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.management.AddProductPartController">
+   <children>
+      <Label fx:id="addPartLabel" layoutX="22.0" layoutY="21.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="modifyPartLabel" layoutX="22.0" layoutY="21.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="madeInHouseButton" layoutX="115.0" layoutY="23.0" onAction="#madeInHouseButtonAction" selected="true" text="In House" />
+      <RadioButton fx:id="outsourcedButton" layoutX="220.0" layoutY="23.0" onAction="#outsourcedButtonAction" text="Outsourced" />
+      <TextField fx:id="partIDTextField" disable="true" editable="false" layoutX="115.0" layoutY="66.0" promptText="Auto Generated">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="partNameTextField" layoutX="115.0" layoutY="122.0" promptText="Name of Part">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="partStockField" layoutX="115.0" layoutY="178.0" promptText="# in Stock">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="partPriceField" layoutX="115.0" layoutY="234.0" promptText="Price/Cost">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="partMinField" layoutX="115.0" layoutY="290.0" prefHeight="25.0" prefWidth="72.0" promptText="Min">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="partMaxField" layoutX="260.0" layoutY="290.0" prefHeight="25.0" prefWidth="79.0" promptText="Max">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="companyNameOrMachinePartIDField" layoutX="189.5" layoutY="351.0" promptText="ID or Name" />
+      <Label layoutX="42.0" layoutY="72.0" prefHeight="27.0" prefWidth="43.0" text="ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="129.0" text="Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="184.0" text="Stock">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="239.0" text="Price">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="294.0" text="Min">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="210.0" layoutY="294.0" text="Max">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="machinePartIDLabel" layoutX="42.0" layoutY="350.0" text="Machine ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="companyNamePartLabel" layoutX="42.0" layoutY="350.0" text="Company Name" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="248.0" layoutY="409.0" onAction="#closeButtonAction" text="CANCEL" />
+      <Button layoutX="315.0" layoutY="409.0" onAction="#savePartButtonAction" text="SAVE" />
+   </children>
+</AnchorPane>

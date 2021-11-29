@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import inventory.management.Inventory?>
+
+<AnchorPane id="AnchorPane" pickOnBounds="false" prefHeight="400.0" prefWidth="796.0" style="-fx-background-color: #70acd4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.management.Inventory">
+    <children>
+        <Label fx:id="titleLabel" layoutX="248.0" layoutY="27.0" minHeight="18" minWidth="70" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Region layoutX="32.0" layoutY="90.0" prefHeight="228.0" prefWidth="364.0" style="-fx-background-color: #EEEEEE;" />
+      <Region layoutX="400.0" layoutY="90.0" prefHeight="228.0" prefWidth="364.0" style="-fx-background-color: #EEEEEE;" />
+      <Label fx:id="partLabel" layoutX="48.0" layoutY="97.5" minHeight="16" minWidth="69" text="Parts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="productLabel" layoutX="415.0" layoutY="98" minHeight="16" minWidth="69" text="Products">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="173.0" layoutY="99.0" onAction="#searchPartButtonAction" text="SEARCH">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="partFilter" layoutX="240.0" layoutY="99" promptText="Name of Part" />
+      <Button layoutX="541.0" layoutY="99.0" onAction="#searchProductButtonAction" text="SEARCH">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="productFilter" layoutX="608.0" layoutY="99" promptText="Name of Part" />
+      <Button layoutX="219.0" layoutY="285.0" onAction="#addPartButtonAction" text="ADD" />
+      <Button layoutX="264.0" layoutY="285.0" onAction="#modifyPartButtonAction" text="MODIFY" />
+      <Button layoutX="328.0" layoutY="285.0" onAction="#deletePartAction" text="DELETE" />
+      <Button layoutX="587.0" layoutY="285.0" onAction="#addProductButtonAction" text="ADD" />
+      <Button layoutX="632.0" layoutY="285.0" onAction="#modifyProductButtonAction" text="MODIFY" />
+      <Button layoutX="696.0" layoutY="285.0" onAction="#deleteProductSelected" text="DELETE" />
+      <Button layoutX="710.0" layoutY="345.0" onAction="#exitButtonAction" style="-fx-text-fill: #df2119;" text="EXIT" />
+      <TableView fx:id="partTable" layoutX="32.0" layoutY="133.0" prefHeight="143.0" prefWidth="364.0">
+         <columns>
+            <TableColumn fx:id="partID" editable="false" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="partName" prefWidth="115.0" text="Name" />
+            <TableColumn fx:id="partStock" prefWidth="77.5" text="Stock" />
+            <TableColumn fx:id="partPrice" prefWidth="110.0" text="Price Per Item" />
+         </columns>
+      </TableView>
+      <TableView fx:id="productTable" layoutX="400.0" layoutY="133.0" prefHeight="143.0" prefWidth="364.0">
+         <columns>
+            <TableColumn fx:id="productID" editable="false" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="productName" prefWidth="115.0" text="Name" />
+            <TableColumn fx:id="productStock" prefWidth="77.5" text="Stock" />
+            <TableColumn fx:id="productPrice" prefWidth="110.0" text="Price Per Item" />
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>
